@@ -53,7 +53,7 @@ def validateInput(name: String, marks: Int, totalPossibleMarks: Int, precentage:
 def getStudentInfoWithRetry(): (String, Int, Int, Float, Char) = {
     val name = scala.io.StdIn.readLine("\nEnter Student's name: ").trim()
     val totalPossibleMarks = scala.io.StdIn.readLine("Enter total possible marks: ").trim().toInt
-    val marks = scala.io.StdIn.readLine("Ente marks: ").trim().toInt
+    val marks = scala.io.StdIn.readLine("Enter marks: ").trim().toInt
     val percentage = (marks.toFloat / totalPossibleMarks) * 100
     val grade = percentage match {
         case x if x < 50 => 'D'
